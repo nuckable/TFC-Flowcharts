@@ -1,0 +1,90 @@
+@startuml TerraFirmaCraft+
+
+partition "Stone Age" {
+  "Start of the game" --> ===A1===
+  ===A1=== --> "Collect rocks"
+  ===A1=== --> "Collect sticks"
+  ===A1=== --> "Find fresh water"
+  ===A1=== -->[Golden Rod] "Find clay"
+  ===A1=== --> "Find trees"
+  ===A1=== --> "Find surface ores"
+  ===A1=== --> "Find wild crops"
+  ===A1=== --> "Find wild animals"
+  "Collect rocks" --> "Knapping"
+  "Knapping" --> "Stone tools / weapons"
+  "Collect sticks" --> "Stone tools / weapons"
+  "Collect sticks" --> "Fire starter"
+  "Collect sticks" --> "Thatch roof"
+  "Stone tools / weapons" -->[Shovel] "Harvest clay"
+  "Stone tools / weapons" -->[Shovel] "Collect dirt"
+  "Collect dirt" --> "Mud bricks"
+  "Collect dirt" --> "Early game housing"
+  "Stone tools / weapons" -->[Axe] "Chop trees"
+  "Stone tools / weapons" -->[Knife] "Harvest straw"
+  "Stone tools / weapons" -->[Javelin] "Hunt deer"
+  "Fire starter" --> "Make campfire"
+  "Make campfire" --> "Torches"
+  "Make campfire" --> "Cook food"
+  "Harvest straw" --> "Pit kiln"
+  "Harvest straw" --> "Straw Clothing"
+  note bottom
+    Particularly useful
+    for hot climates
+  end note
+  "Harvest straw" --> "Mud bricks"
+  "Harvest straw" --> "Thatch roof"
+  "Harvest straw" --> "Basket"
+  "Thatch roof" --> "Early game housing"
+  "Find clay" -[dashed]-> "Harvest clay"
+  "Find clay" -[dotted]->[Often in proximity to] "Find fresh water"
+  "Chop trees" --> "Pit kiln"
+  "Chop trees" --> "Make campfire"
+  "Chop trees" --> "Early game housing"
+  "Harvest clay" --> "Clay forming"
+  "Harvest clay" --> "Mud bricks"
+  "Mud bricks" -[dashed]-> "Early game housing"
+  "Clay forming" --> "Pit kiln"
+  "Pit kiln" --> "Pottery"
+  "Pottery" --> "Storage"
+  "Pottery" --> "Molds/Tool molds"
+  "Pottery" --> "Bowls"
+  "Pottery" --> "Clay tiles"
+  "Bowls" --> "Salads"
+  "Bowls" --> "Ore panning"
+  "Pottery" --> "Portable water"
+  "Portable water" -->[Clay bucket] "Mud bricks"
+  "Find trees" -[dashed]-> "Chop trees"
+  note left
+    Large logs need to be crafted
+    with an axe to make chopped logs.
+  end note
+  "Find wild crops" --> "Harvest wild crops when mature"
+  "Harvest wild crops when mature" --> "Salads"
+  "Find wild animals" -[dashed]-> "Hunt deer/bears"
+  "Hunt deer/bears" --> "Cook food"
+}
+
+partition "Copper Age" {
+  "Find surface ores" -->[Native Copper, Tetrahedrite or Malachite] "Copper tools / weapons"
+  "Ore panning" --> "Copper tools / weapons"
+  "Pit kiln" --> "Copper tools / weapons"
+  "Copper tools / weapons" -->[Saw] "Lumber"
+  "Copper tools / weapons" -->[Saw] "Support beams"
+  "Copper tools / weapons" -->[Pickaxe] "Ore mining"
+  "Copper tools / weapons" -->[Pickaxe] "Stone anvil"
+  "Copper tools / weapons" -->[Prospector's pick] "Ore mining"
+  "Copper tools / weapons" -->[Scythe] "Collect saplings"
+  "Support beams" --> "Ore mining"
+  "Clay tiles" -[dashed]-> "Ceramic tile roof"
+  "Lumber" --> "Ceramic tile roof"
+  "Lumber" --> "Planks"
+  "Lumber" --> "Barrels"
+  "Barrels" --> "Rope"
+  "Barrels" --> "Leatherworking"
+  "Hunt deer/bears" --> "Leatherworking"
+  "Harvest wild crops when mature" -[dashed]->[Jute] "Rope"
+  "Lumber" --> "Buckets"
+  "Planks" --> "Crafting table"
+}
+
+@enduml
