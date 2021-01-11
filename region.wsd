@@ -1,0 +1,12 @@
+@startuml Determining Region
+
+"Craft a Straw Hat" -->[Conical] "Asia"
+"Craft a Straw Hat" -->[Flat] "Do you have Black Eyed Peas, Fever, Limba, or Baobab"
+"Do you have Black Eyed Peas, Fever, Limba, or Baobab" -->[Yes] "Africa"
+"Do you have Black Eyed Peas, Fever, Limba, or Baobab" -->[No] "Do you have Tomatoes, White Cedar, Douglas Fir, or Maize"
+"Do you have Tomatoes, White Cedar, Douglas Fir, or Maize" -->[Yes] "America"
+"Do you have Tomatoes, White Cedar, Douglas Fir, or Maize" -->[No] "Europe"
+
+
+
+@enduml
